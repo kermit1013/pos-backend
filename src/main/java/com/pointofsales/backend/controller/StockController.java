@@ -5,10 +5,7 @@ import com.pointofsales.backend.repository.StockRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +23,10 @@ public class StockController {
     @PostMapping("/stocks")
     public Stock addStocks(@RequestBody Stock stock) {
         return stockRepository.save(stock);
+    }
+
+    @DeleteMapping("/stocks/{stockId}")
+    public void deleteStocks(@PathVariable long stockId) {
+        stockRepository.deleteById(stockId);
     }
 }
