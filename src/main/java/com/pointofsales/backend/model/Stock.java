@@ -16,7 +16,7 @@ public class Stock extends BaseModel  {
 
     private String category;
 
-    private Integer capacity;
+    private float capacity;
 
     private String unit;
 
@@ -48,11 +48,11 @@ public class Stock extends BaseModel  {
         this.category = category;
     }
 
-    public Integer getCapacity() {
+    public float getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(Integer capacity) {
+    public void setCapacity(float capacity) {
         this.capacity = capacity;
     }
 
