@@ -18,6 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @RestController
+@RequestMapping(value = "/api")
 public class StockController {
 
     @Autowired
